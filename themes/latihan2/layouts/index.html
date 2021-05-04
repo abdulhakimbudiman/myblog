@@ -1,2 +1,36 @@
 {{ define "main" }}
+<section class="default-padding-small">
+    <div class="container">
+      <h1 class="fw-800 mb-2 text-center h3">
+        {{ site.Title }}
+      </h1>
+      <br />
+      <br />
+      {{ range .Pages }}
+      <div class="col-1-of-1 small-col-1-of-3 mb-8">
+        <a href="{{.Permalink}}" class="color-inherit">
+        <div class="card">
+          <div class="img">
+            <img
+              width="350"
+              height="250"
+              src='/images/{{ .Param "image" }}'
+              data-sizes="auto"
+              data-expand="700"
+              sizes="353px"
+            />
+          </div>
+          <div class="content">
+            <h4 class="fw-700 title">{{.Title}}</h4>
+            <p>
+              {{.Description}}
+            </p>
+            <p class="font-size-sm text-muted text-uppercase">{{ .Date.Format "January 02, 2006" }}</p>
+          </div>
+        </div>
+        </a>
+      </div>        
+    {{ end }}
+    </div>
+</section>
 {{ end }}

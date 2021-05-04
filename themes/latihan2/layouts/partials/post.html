@@ -1,0 +1,41 @@
+<section class="default-padding-small">
+    <div class="container">
+        <div class="article">
+            <h1 class="h3 fw-700 text-center">{{ .Title }}</h1>
+            <p class="text-center text-muted" style="font-size: 12px">
+                {{ .Date.Format "02 Jan 2006" }}
+              </p>
+              <div class="img">               
+                  <img src='/images/{{ .Param "image" }}' alt="Free Backlink Generator" />
+              </div>
+            {{ if .Content }}
+                <div class="content">{{.Content}}</div>
+            {{ end }}
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                  <div
+                    class="share flex items-center flex-wrap flex-column-m justify-center"
+                  >
+                    <p class="h5 fw-800 mr-4 no-marginy">Share:</p>
+                    <a href="https://twitter.com/share?url={{.Permalink }}" rel="nofollow noreferrer" target="_blank" onclick="return!window.open(this.href,'Twitter Share','width=500,height=500')"
+                      class="btn btn-twitter fx mr-4 fw-700 full-width no-margin-x-m mb-4-m" aria-label="Twitter" title="Twitter"
+                    >
+                      <i class="fab fa-twitter"></i>&nbsp;&nbsp; Twitter
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&amp;u={{.Permalink }}"
+                      class="btn btn-facebook fx mr-4 fw-700 full-width no-margin-x-m mb-4-m" rel="nofollow noreferrer" target="_blank" onclick="return!window.open(this.href,'Facebook Share','width=500,height=500')" aria-label="Facebook" title="Facebook"
+                    >
+                      <i class="fab fa-facebook-f"></i>&nbsp;&nbsp; Facebook
+                    </a>
+                    <a href="https://web.whatsapp.com/send?text={{.Permalink }}" aria-label="Whatsapp" title="Whatsapp"
+                      class="btn btn-whatsapp fx mr-4 fw-700 full-width no-margin-x-m mb-4-m"
+                    >
+                      <i class="fab fa-whatsapp"></i>&nbsp;&nbsp; Whatsapp
+                    </a>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</section>

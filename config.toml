@@ -2,3 +2,8 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 theme = "latihan2"
 title = "Latihan2"
+
+[params]
+    # OpenGraph / Twitter Card metadata
+    description = "This is meta description"
+    author = "Latihan2"
